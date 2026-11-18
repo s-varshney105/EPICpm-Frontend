@@ -974,43 +974,332 @@ button {
   line-height: 1.8;
 }
 
-/* HOW IT WORKS */
-
-.how-section {
-  text-align: center;
-  padding: 95px 5%;
+/* TEAMWORK COLLECTION SECTION */
+.teamwork-section {
+  padding: 85px 5%;
+  background: #ffffff;
 }
 
-.steps-grid {
-  max-width: 1100px;
-  margin: 50px auto 0;
+.teamwork-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  text-align: left;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
 
-.step-card {
-  padding: 28px;
-  border: 1px solid var(--border);
+.teamwork-eyebrow {
+  font-size: 20px;
+  font-weight: 400;
+  color: #172b4d;
+  margin-bottom: 20px;
+}
+
+.teamwork-eyebrow strong {
+  font-weight: 700;
+}
+
+.teamwork-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #172b4d;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.teamwork-description {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #42526e;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.teamwork-includes {
+  margin-bottom: 34px;
+}
+
+.includes-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #6b778c;
+  margin-bottom: 14px;
+}
+
+.product-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.product-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jira-icon,
+.confluence-icon,
+.loom-icon {
+  background: #0052cc;
+}
+
+.rovo-icon {
+  background: transparent;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.teamwork-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.outline-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 1.5px solid #172b4d;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.outline-pill-btn:hover {
+  background: #172b4d;
+  color: #ffffff;
+}
+
+.text-arrow-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0052cc;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.text-arrow-link:hover {
+  text-decoration: underline;
+}
+
+/* Visual Canvas */
+.teamwork-visual {
+  position: relative;
+  width: 100%;
+}
+
+.visual-grid-canvas {
+  background-color: #fafbfc;
+  background-image: 
+    linear-gradient(#e6edf5 1px, transparent 1px),
+    linear-gradient(90deg, #e6edf5 1px, transparent 1px);
+  background-size: 26px 26px;
+  border: 1px solid #ebecf0;
+  border-radius: 20px;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.floating-card {
+  position: absolute;
+  background: #ffffff;
   border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(9, 30, 66, 0.08), 0 0 1px rgba(9, 30, 66, 0.2);
+  padding: 12px 14px;
+  font-size: 12px;
 }
 
-.step-card > span {
-  color: var(--primary);
-  font-size: 25px;
-  font-weight: 800;
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #172b4d;
+  margin-bottom: 8px;
 }
 
-.step-card h3 {
-  margin: 20px 0 10px;
-  font-size: 17px;
+.mini-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.jira-mini,
+.confluence-mini,
+.loom-mini { background: #0052cc; }
+.rovo-mini { background: #6554c0; }
+
+.jira-card {
+  top: 50px;
+  left: 20px;
+  width: 165px;
+  z-index: 2;
 }
 
-.step-card p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
+.item-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #006644;
+  background: #e3fcef;
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.item-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  float: right;
+  font-size: 11px;
+}
+
+.confluence-card {
+  top: 25px;
+  right: 25px;
+  width: 185px;
+  z-index: 1;
+}
+
+.doc-preview-bars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.bar { height: 6px; border-radius: 3px; }
+.green-bar { width: 35px; background: #36b37e; }
+.purple-bar { width: 25px; background: #6554c0; }
+
+.doc-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.line-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+}
+
+.skeleton-line {
+  height: 8px;
+  background: #ebecf0;
+  border-radius: 4px;
+  width: 65px;
+}
+
+.skeleton-line.wide {
+  width: 95px;
+  background: #deebff;
+}
+
+.loom-card {
+  bottom: 35px;
+  left: 25px;
+  width: 185px;
+  z-index: 3;
+  border-left: 4px solid #0052cc;
+}
+
+.loom-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.loom-notes { display: flex; gap: 4px; }
+
+.sticky-note { width: 20px; height: 20px; border-radius: 2px; }
+.note-yellow { background: #fffae6; border: 1px solid #ffe380; }
+.note-green { background: #e3fcef; border: 1px solid #79f2c0; }
+.note-purple { background: #eae6ff; border: 1px solid #b3bac5; }
+
+.loom-player {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #dfe1e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  position: absolute;
+  font-size: 10px;
+  color: #172b4d;
+}
+
+.rovo-card {
+  bottom: 60px;
+  right: 25px;
+  width: 140px;
+  z-index: 2;
+  border: 1.5px solid #6554c0;
+}
+
+.rovo-badge {
+  display: inline-block;
+  background: #deebff;
+  color: #0052cc;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+.facilitator-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  background: #0052cc;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.3);
+  z-index: 4;
+}
+
+@media (max-width: 960px) {
+  .teamwork-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* CALL TO ACTION */
