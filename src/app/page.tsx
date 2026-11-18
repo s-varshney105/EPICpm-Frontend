@@ -47,9 +47,9 @@ export default function Home() {
         </section>
 
         <section className="cta-section">
-          <h2>Ready to get things done?</h2>
+          <h2>Ship faster with <span className="cta-blue-text">agents in EPICpm</span></h2>
           <p>
-            Bring your projects and team together with EpicPM.
+            Get started for free – no credit card required.
           </p>
 
           <a href="/signup" className="primary-btn">
