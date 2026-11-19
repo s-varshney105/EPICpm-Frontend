@@ -1,79 +1,66 @@
+import Image from "next/image";
 
-import {
-  LayoutGrid,
-  Users,
-  ChartNoAxesCombined,
-  CalendarCheck,
-  ShieldCheck,
-  Zap,
-} from "lucide-react";
-
-const features = [
+const aiFeatures = [
   {
-    icon: LayoutGrid,
-    title: "Project Organization",
+    image: "/Teamwork_graph.png",
+    title: "Teamwork Graph",
     description:
-      "Keep all your projects organized in one central workspace.",
+      "Better context = fewer tokens. Connect Atlassian’s context graph, the Teamwork Graph to your entire stack and deliver context to your favorite AI tools via the MCP or CLI.",
+    linkText: "Explore Teamwork Graph →",
+    linkHref: "#",
   },
   {
-    icon: Users,
-    title: "Team Collaboration",
+    image: "/AI_serach.png",
+    title: "AI Search",
     description:
-      "Work together, assign responsibilities, and share updates.",
+      "Use enterprise search to find anything across Jira, Confluence, and any connected app from a single search bar. Get real answers, not just a list of links.",
+    linkText: "Explore Teamwork Graph →",
+    linkHref: "#",
   },
   {
-    icon: ChartNoAxesCombined,
-    title: "Progress Tracking",
+    image: "/ROVO.png",
+    title: "Rovo",
     description:
-      "Track project performance and monitor task completion.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Task Management",
-    description:
-      "Create tasks, set deadlines, and manage priorities easily.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Secure Workspace",
-    description:
-      "Keep your project information organized and protected.",
-  },
-  {
-    icon: Zap,
-    title: "Simple Workflow",
-    description:
-      "Reduce unnecessary steps and focus on getting work done.",
+      "AI teammates that join your work to research, draft, and take action across your tools – right inside Jira, ready when you are.",
+    linkText: "Meet Rovo →",
+    linkHref: "#",
   },
 ];
 
 export default function Features() {
   return (
     <section className="features-section" id="features">
-      <div className="section-heading">
-        <span className="section-tag">FEATURES</span>
-        <h2>Everything your team needs</h2>
-        <p>
-          Powerful tools to help you plan, organize, and
-          complete your projects.
-        </p>
-      </div>
+      <div className="features-container">
+        <div className="ai-features-header">
+          <h2 className="ai-features-main-title">More than project management</h2>
+          <p className="ai-features-main-subtitle">
+            Turn your system of record into a system of action. Every Jira plan
+            comes with the AI tools you need to activate your team, where ever
+            they work.
+          </p>
+        </div>
 
-      <div className="features-grid">
-        {features.map((feature) => {
-          const Icon = feature.icon;
-
-          return (
-            <div className="feature-card" key={feature.title}>
-              <div className="feature-icon">
-                <Icon size={24} />
+        <div className="ai-features-grid">
+          {aiFeatures.map((item) => (
+            <div className="ai-feature-card" key={item.title}>
+              <div className="ai-feature-image-wrapper">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={600}
+                  height={600}
+                  className="ai-feature-image"
+                />
               </div>
 
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
+              <h3 className="ai-feature-title">{item.title}</h3>
+              <p className="ai-feature-description">{item.description}</p>
+              <a href={item.linkHref} className="ai-feature-link">
+                {item.linkText}
+              </a>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

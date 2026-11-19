@@ -1,9 +1,15 @@
 
 import Navbar from "../component/Navbar";
 import Hero from "../component/HeroSection";
+import LogoBar from "../component/LogoBar";
+import AiEraSection from "../component/AiEraSection";
+import EveryTeamSection from "../component/EveryTeamSection";
 import Features from "../component/Feature";
+import CustomerStories from "../component/CustomerStories";
+import ResourceCards from "../component/ResourceCards";
 import Footer from "../component/Footer";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,9 +19,19 @@ export default function Home() {
       <main>
         <Hero />
 
+        <LogoBar />
+
+        <AiEraSection />
+
+        <EveryTeamSection />
+
         <Features />
 
-                <section className="teamwork-section" id="how-it-works">
+        <CustomerStories />
+
+        <ResourceCards />
+
+        <section className="teamwork-section" id="how-it-works">
           <div className="teamwork-container">
             {/* Left Content */}
             <div className="teamwork-content">
@@ -114,78 +130,16 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Visual Graphic with Connected Cards */}
+            {/* Right Visual Graphic */}
             <div className="teamwork-visual">
-              <div className="visual-grid-canvas">
-                {/* Jira Card */}
-                <div className="floating-card jira-card">
-                  <div className="card-header">
-                    <span className="mini-icon jira-mini"></span>
-                    <span>EPICpm work item</span>
-                  </div>
-                  <div className="card-body">
-                    <div className="item-tag">SUM-01</div>
-                    <div className="item-meta">
-                      <span>1</span>
-                      <span className="priority-arrow">∧</span>
-                      <span className="avatar-chip">🧑‍💻</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Confluence Card */}
-                <div className="floating-card confluence-card">
-                  <div className="card-header">
-                    <span className="mini-icon confluence-mini"></span>
-                    <span>Confluence doc</span>
-                  </div>
-                  <div className="card-body">
-                    <div className="doc-preview-bars">
-                      <span className="bar green-bar"></span>
-                      <span className="bar purple-bar"></span>
-                    </div>
-                    <div className="doc-lines">
-                      <div className="line-row"><span>🔖</span><div className="skeleton-line"></div></div>
-                      <div className="line-row"><span>🎥</span><div className="skeleton-line wide"></div></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Loom Card */}
-                <div className="floating-card loom-card">
-                  <div className="card-header">
-                    <span className="mini-icon loom-mini"></span>
-                    <span>Loom meeting notes</span>
-                  </div>
-                  <div className="loom-body">
-                    <div className="loom-notes">
-                      <div className="sticky-note note-yellow"></div>
-                      <div className="sticky-note note-green"></div>
-                      <div className="sticky-note note-purple"></div>
-                    </div>
-                    <div className="loom-player">
-                      <div className="loom-avatar">👩</div>
-                      <div className="play-button">▶</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Rovo Chat Card */}
-                <div className="floating-card rovo-card">
-                  <div className="card-header">
-                    <span className="mini-icon rovo-mini"></span>
-                    <span>Rovo Chat</span>
-                  </div>
-                  <div className="rovo-badge">
-                    <span>AI</span>
-                  </div>
-                </div>
-
-                {/* Brainstorm Facilitator Tag */}
-                <div className="facilitator-tag">
-                  <span>📊</span> Brainstorm Facilitator
-                </div>
-              </div>
+              <Image
+                src="/teamwork-collection.png"
+                alt="EPICpm with Confluence, Loom, and Rovo"
+                width={600}
+                height={520}
+                priority
+                className="teamwork-image"
+              />
             </div>
           </div>
         </section>

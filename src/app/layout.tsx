@@ -1,4 +1,3 @@
-// @ts-expect-error Next.js processes global CSS imports.
 import "./globals.css";
 
 export const metadata = {
